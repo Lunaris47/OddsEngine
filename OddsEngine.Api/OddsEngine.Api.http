@@ -1,0 +1,6 @@
+@OddsEngine.Api_HostAddress = http://localhost:5269
+
+GET {{OddsEngine.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

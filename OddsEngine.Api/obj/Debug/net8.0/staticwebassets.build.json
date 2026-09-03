@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "f1nMthdkP47TVgQBNc5kVVtTHf9OMpPtoUjS6CXArRw=",
+  "Source": "OddsEngine.Api",
+  "BasePath": "_content/OddsEngine.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
