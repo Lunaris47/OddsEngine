@@ -30,3 +30,4 @@ C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\refint\OddsEn
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\OddsEngine.Api.pdb
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\OddsEngine.Api.genruntimeconfig.cache
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\ref\OddsEngine.Api.dll
+C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\OddsEngine.Api.sourcelink.json
