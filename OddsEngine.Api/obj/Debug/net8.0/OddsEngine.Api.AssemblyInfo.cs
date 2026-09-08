@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OddsEngine.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8f5053fa41297aef045525d75cbe4bfffa6ffcc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85460a55573547ed9686c2105b421334f5c13297")]
 [assembly: System.Reflection.AssemblyProductAttribute("OddsEngine.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OddsEngine.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
