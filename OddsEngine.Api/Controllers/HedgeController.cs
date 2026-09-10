@@ -8,6 +8,10 @@ namespace OddsEngine.Api.Controllers;
 [Route("api/hedge")]
 public class HedgeController : ControllerBase
 {
+    /// <summary>
+    /// Calculates the hedge stake that locks in an equal profit (or equal loss) regardless of outcome.
+    /// </summary>
+
     // POST /api/hedge/equal-profit
     // Body: { "originalStake": 100, "originalAmerican": 1000, "hedgeAmerican": -200 }
     [HttpPost("equal-profit")]
@@ -37,6 +41,10 @@ public class HedgeController : ControllerBase
             return BadRequest(ex.Message);
         }
     }
+
+    /// <summary>
+    /// Detects whether the best available odds across books form an arbitrage, and returns the guaranteed return and stake proportions.
+    /// </summary>
 
     // POST /api/hedge/arbitrage
     // Body: { "americanOdds": [105, 105] }  <- best available odds per outcome, across books

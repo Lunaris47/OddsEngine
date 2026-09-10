@@ -31,3 +31,5 @@ C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\OddsEngine.Ap
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\OddsEngine.Api.genruntimeconfig.cache
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\ref\OddsEngine.Api.dll
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\OddsEngine.Api.sourcelink.json
+C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\bin\Debug\net8.0\OddsEngine.Api.xml
+C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Api\obj\Debug\net8.0\OddsEngine.Api.xml

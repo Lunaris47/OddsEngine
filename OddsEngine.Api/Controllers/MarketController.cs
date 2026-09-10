@@ -8,6 +8,10 @@ namespace OddsEngine.Api.Controllers;
 [Route("api/market")]
 public class MarketController : ControllerBase
 {
+    /// <summary>
+    /// Calculates a market's overround and vig, and returns the fair (no-vig) odds for each outcome.
+    /// </summary>
+
     // POST /api/market/novig
     // Body: { "americanOdds": [-110, -110] }
     [HttpPost("novig")]

@@ -8,6 +8,10 @@ namespace OddsEngine.Api.Controllers;
 [Route("api/parlay")]
 public class ParlayController : ControllerBase
 {
+    /// <summary>
+    /// Prices a multi-leg parlay: combined odds, total payout, profit, and true hit probability.
+    /// </summary>
+
     // POST /api/parlay/price
     // Body: { "stake": 10, "americanLegs": [-110, -110, -110] }
     [HttpPost("price")]

@@ -8,6 +8,10 @@ namespace OddsEngine.Api.Controllers;
 [Route("api/value")]
 public class ValueController : ControllerBase
 {
+    /// <summary>
+    /// Computes the expected value and edge of a bet given the offered odds and your assessed true probability.
+    /// </summary>
+
     // POST /api/value/ev
     // Body: { "american": 110, "trueProbability": 0.5 }
     [HttpPost("ev")]

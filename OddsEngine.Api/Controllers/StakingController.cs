@@ -8,6 +8,10 @@ namespace OddsEngine.Api.Controllers;
 [Route("api/staking")]
 public class StakingController : ControllerBase
 {
+    /// <summary>
+    /// Recommends a stake size using the Kelly criterion, with optional fractional-Kelly multiplier. Returns zero for negative-EV bets.
+    /// </summary>
+
     // POST /api/staking/kelly
     // Body: { "bankroll": 1000, "american": 100, "trueProbability": 0.55 }
     // Optional: "multiplier": 0.5 for half Kelly, (defaultS to 1 = full Kelly)

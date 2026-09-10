@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OddsEngine.Api</name>
+    </assembly>
+    <members>
+        <member name="M:OddsEngine.Api.Controllers.HedgeController.EqualProfit(OddsEngine.Api.Contracts.HedgeRequest)">
+            <summary>
+            Calculates the hedge stake that locks in an equal profit (or equal loss) regardless of outcome.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Controllers.HedgeController.Arbitrage(OddsEngine.Api.Contracts.MarketRequest)">
+            <summary>
+            Detects whether the best available odds across books form an arbitrage, and returns the guaranteed return and stake proportions.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Controllers.MarketController.RemoveVig(OddsEngine.Api.Contracts.MarketRequest)">
+            <summary>
+            Calculates a market's overround and vig, and returns the fair (no-vig) odds for each outcome.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Controllers.OddsController.Convert(System.Int32)">
+            <summary>
+            Converts American odds to decimal odds and implied probability.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Controllers.ParlayController.Price(OddsEngine.Api.Contracts.ParlayRequest)">
+            <summary>
+            Prices a multi-leg parlay: combined odds, total payout, profit, and true hit probability.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Controllers.StakingController.Kelly(OddsEngine.Api.Contracts.KellyRequest)">
+            <summary>
+            Recommends a stake size using the Kelly criterion, with optional fractional-Kelly multiplier. Returns zero for negative-EV bets.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Controllers.ValueController.ExpectedValue(OddsEngine.Api.Contracts.EvRequest)">
+            <summary>
+            Computes the expected value and edge of a bet given the offered odds and your assessed true probability.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Hedge.EqualProfitHedgeStake(System.Decimal,OddsEngine.Api.Domain.Odds,OddsEngine.Api.Domain.Odds)">
+            <summary>
+            You hold a bet (stake at odds). The other side is now offered
+            at hedgeOdds. Returns the hedge stake that locks in an equal
+            profit (or equal loss) regardless of outcome.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Hedge.LockedProfit(System.Decimal,OddsEngine.Api.Domain.Odds,OddsEngine.Api.Domain.Odds)">
+            <summary>Guaranteed profit after placing the equal-profit hedge.</summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Hedge.IsArbitrage(OddsEngine.Api.Domain.Odds[])">
+            <summary>
+            An arbitrage exists when the best available odds on each side
+            imply probabilities summing to less than 1 (across books).
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Hedge.ArbitrageReturn(OddsEngine.Api.Domain.Odds[])">
+            <summary>Guaranteed return per unit of total outlay, if an arb exists.</summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Market.Overround(OddsEngine.Api.Domain.Odds[])">
+            <summary>Total implied probability across all outcomes. > 1 means vig.</summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Market.Vig(OddsEngine.Api.Domain.Odds[])">
+            <summary>The book's margin, e.g. 0.0476 for a standard -110/-110 market.</summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Market.RemoveVig(OddsEngine.Api.Domain.Odds[])">
+            <summary>
+            Removes the vig by normalizing implied probabilities to sum to 1,
+            returning the fair (no-vig) odds for each outcome.
+            </summary>
+        </member>
+        <member name="T:OddsEngine.Api.Domain.Odds">
+            <summary>
+            Immutable representation of betting odds. Internally stored as
+            decimal odds; all other formats convert through it.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Parlay.HitProbability(OddsEngine.Api.Domain.Odds[])">
+            <summary>
+            True combined probability of the parlay hitting, using
+            no-vig probabilities if you pass fair odds — or the book's
+            inflated view if you pass listed odds. Comparing the two is
+            exactly how you see why books love parlays.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Staking.KellyFraction(OddsEngine.Api.Domain.Odds,System.Decimal,System.Decimal)">
+            <summary>
+            Optimal fraction of bankroll to stake. Returns 0 for -EV bets
+            (Kelly never bets a negative edge). Multiplier scales it:
+            0.5 = half-Kelly, the common risk-reduced choice.
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Value.ExpectedValuePerUnit(OddsEngine.Api.Domain.Odds,System.Decimal)">
+            <summary>
+            Expected value per unit staked. Positive means the bet is
+            +EV at your assessed probability.
+            EV = p * (decimal - 1) - (1 - p)
+            </summary>
+        </member>
+        <member name="M:OddsEngine.Api.Domain.Value.Edge(OddsEngine.Api.Domain.Odds,System.Decimal)">
+            <summary>The edge: your probability minus the (vig-inflated) implied one.</summary>
+        </member>
+    </members>
+</doc>
