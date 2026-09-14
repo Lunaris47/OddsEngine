@@ -110,3 +110,4 @@ C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Tests\obj\Debug\net8.0\refint\Odds
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Tests\obj\Debug\net8.0\OddsEngine.Tests.pdb
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Tests\obj\Debug\net8.0\OddsEngine.Tests.genruntimeconfig.cache
 C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Tests\obj\Debug\net8.0\ref\OddsEngine.Tests.dll
+C:\Users\Jesse\Projects\OddsEngine\OddsEngine.Tests\bin\Debug\net8.0\OddsEngine.Api.xml
