@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("Frontend", policy =>
         policy.WithOrigins(
                 "http://localhost:5173",
-                "https://YOUR-VERCEL-URL.vercel.app")
+                "https://oddsengine-ui.vercel.app")
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
